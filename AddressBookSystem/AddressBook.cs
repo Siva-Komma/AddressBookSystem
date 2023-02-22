@@ -31,6 +31,20 @@ namespace AddressBookSystem
             cd.Email = Console.ReadLine();
             addressbook.Add(cd);
         }
-
+        public void Display()
+        {
+            foreach (ContactDetails cd in addressbook)
+            {
+                Console.WriteLine("\nDisplaying 1st person details");
+                Console.WriteLine("\nFirst_Name: " + cd.First_Name);
+                Console.WriteLine("Last_Name: " + cd.Last_Name);
+                Console.WriteLine("Address: " + cd.Address);
+                Console.WriteLine("City: " + cd.City);
+                Console.WriteLine("State: " + cd.State);
+                Console.WriteLine("Zip_Code: " + cd.Zip_Code);
+                Console.WriteLine("PhoneNumber: " + cd.PhoneNumber);
+                Console.WriteLine("Email: " + cd.Email);
+            }
+        }
     }
 }
