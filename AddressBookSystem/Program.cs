@@ -14,7 +14,7 @@ namespace AddressBookSystem
             AddressBook ab = new AddressBook();
             while (true)
             {
-                Console.WriteLine("1.Contact\n2.Display");
+                Console.WriteLine("1.Contact\n2.Display\n3.Edit");
                 Console.WriteLine("Choose your option");
                 int Option = Convert.ToInt32(Console.ReadLine());
                 switch (Option)
@@ -25,6 +25,9 @@ namespace AddressBookSystem
                         break;
                     case 2:
                         ab.Display(); 
+                        break;
+                    case 3:
+                        ab.Edit();
                         break;
                 }
             }

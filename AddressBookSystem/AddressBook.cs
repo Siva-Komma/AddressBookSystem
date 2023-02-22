@@ -46,5 +46,60 @@ namespace AddressBookSystem
                 Console.WriteLine("Email: " + cd.Email);
             }
         }
+        public void Edit()
+        {
+            foreach (var data in addressbook)
+            {
+                Console.WriteLine("Enter to first name for update");
+                string first_Name = Console.ReadLine();
+
+                if (data.First_Name == first_Name)
+                {
+                    if (addressbook.Contains(data))
+                    {
+                        Console.WriteLine("1.First_Name\n2.Last_Time\n3.Address\n4.City\n5.State\n6.Zip Code\n7.Phone Number\n8.Email");
+                        Console.WriteLine("Choose Your Option");
+                        int Option = Convert.ToInt32(Console.ReadLine());
+
+                        switch (Option)
+                        {
+                            case 1:
+                                string first_name = Console.ReadLine();
+                                data.First_Name = first_name;
+                                break;
+                            case 2:
+                                string last_Name = Console.ReadLine();
+                                data.Last_Name = last_Name;
+                                break;
+                            case 3:
+                                string address = Console.ReadLine();
+                                data.Address = address;
+                                break;
+                            case 4:
+                                string city = Console.ReadLine();
+                                data.City = city;
+                                break;
+                            case 5:
+                                string state = Console.ReadLine();
+                                data.State = state;
+                                break;
+                            case 6:
+                                long zipcode = long.Parse(Console.ReadLine());
+                                data.Zip_Code = zipcode;
+                                break;
+                            case 7:
+                                long phonenumber = long.Parse(Console.ReadLine());
+                                data.PhoneNumber = phonenumber;
+                                break;
+                            case 8:
+                                string email = Console.ReadLine();
+                                data.Email = email;
+                                break;
+                        }
+                        Console.WriteLine("First_Name: {0}\nLast_Time: {1}\nAddress: {2}\nCity: {3}\nState: {4}\nZip Code: {5}\nPhone Number: {6}\nEmail: {7}", data.First_Name, data.Last_Name, data.Address, data.City, data.State, data.Zip_Code, data.PhoneNumber, data.Email);
+                    }
+                }
+            }
+        }
     }
 }
