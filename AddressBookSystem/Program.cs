@@ -11,6 +11,20 @@ namespace AddressBookSystem
         static void Main(string[] args)
         {
             Console.WriteLine("Enter the Address Book System");
+            AddressBook ab = new AddressBook();
+            while (true)
+            {
+                Console.WriteLine("1.Contact");
+                Console.WriteLine("Choose your option");
+                int Option = Convert.ToInt32(Console.ReadLine());
+                switch (Option)
+                {
+                    case 1:
+                        //Contact Deyails of a Person
+                        ab.Contact();
+                        break;
+                }
+            }
             Console.ReadLine();
         }
     }
