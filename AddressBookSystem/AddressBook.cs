@@ -101,5 +101,24 @@ namespace AddressBookSystem
                 }
             }
         }
+        public void Delete()
+        {
+            Console.WriteLine("Enter to first name to delete");
+            string first_Name = Console.ReadLine();
+
+            foreach (var data in addressbook)
+            {
+                if (data.First_Name == first_Name)
+                {
+                    addressbook.Remove(data);
+                    Console.WriteLine("Sucessfully removed");
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Contact not present");
+                }
+            }
+        }
     }
 }
