@@ -121,5 +121,22 @@ namespace AddressBookSystem
                 }
             }
         }
+        public void MultipleAddressBook()
+        {
+            int i = 1;
+            Dictionary<string, List<ContactDetails>> addressbookDict = new Dictionary<string, List<ContactDetails>>();
+            Console.WriteLine("No.of address book added");
+            int NoofBooks = Convert.ToInt32(Console.ReadLine());
+            while (i <= NoofBooks)
+            {
+                Console.WriteLine("Enter Name");
+                string Name = Console.ReadLine();
+                Contact();
+                addressbookDict.Add(Name, addressbook);
+                Console.WriteLine("\n" + Name);
+                Display();
+                i++;
+            }
+        }
     }
 }
