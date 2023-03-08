@@ -138,5 +138,22 @@ namespace AddressBookSystem
                 i++;
             }
         }
+        public void NoDuplicateEntry()
+        {
+            List<ContactDetails> addresses = new List<ContactDetails>();
+            Console.WriteLine("Enter name to check duplicate name or not");
+            string firstname = Console.ReadLine();
+            foreach (var data in addressbook)
+            {
+                if (data.First_Name == firstname)
+                {
+                    Console.WriteLine("Addrss already Present");
+                }
+                else
+                {
+                    Contact();
+                }
+            }
+        }
     }
 }

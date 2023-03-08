@@ -14,7 +14,7 @@ namespace AddressBookSystem
             AddressBook ab = new AddressBook();
             while (true)
             {
-                Console.WriteLine("1.Contact\n2.Display\n3.Edit\n4.Delete\n5.MultipeAddressBook");
+                Console.WriteLine("1.Contact\n2.Display\n3.Edit\n4.Delete\n5.MultipeAddressBook\n6.NoDuplicate Entry");
                 Console.WriteLine("Choose your option");
                 int Option = Convert.ToInt32(Console.ReadLine());
                 switch (Option)
@@ -34,6 +34,9 @@ namespace AddressBookSystem
                         break;
                     case 5:
                         ab.MultipleAddressBook();
+                        break;
+                    case 6:
+                        ab.NoDuplicateEntry(); 
                         break;
                 }
             }
