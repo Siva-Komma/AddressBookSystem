@@ -174,5 +174,26 @@ namespace AddressBookSystem
                 }
             }
         }
+        public void ViewPersonDetails()
+        {
+            Dictionary<string, List<ContactDetails>> addressbookDict = new Dictionary<string, List<ContactDetails>>();
+            MultipleAddressBook();
+            Console.WriteLine("Search person in a city or state accross the multiple AddressBook");
+            string firstname = Console.ReadLine();
+            foreach (var data in addressbook)
+            {
+                if (data.First_Name == firstname)
+                {
+                    Console.WriteLine("Addrss already Present");
+                    Console.WriteLine(data.City);
+                    Console.WriteLine(data.State);
+                }
+                else
+                {
+                    Console.WriteLine("Person not present in city or State");
+                }
+            }
+
+        }
     }
 }
